@@ -1,2 +1,4 @@
 /.env
 /tests/
+/pyproject.toml
+/dist/
