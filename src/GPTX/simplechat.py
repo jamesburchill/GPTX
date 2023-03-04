@@ -1,6 +1,8 @@
 import os
 import openai
 
+from GPTX.common import cost_per_token
+
 from dotenv import load_dotenv
 
 load_dotenv()   # Load all the ENV variables into your os enviroment.
