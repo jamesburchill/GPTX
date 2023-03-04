@@ -1,15 +1,14 @@
 import os
+
 import openai
-
-from GPTX.common import cost_per_token
-
 from dotenv import load_dotenv
+
+from common import cost_per_token
 
 load_dotenv()   # Load all the ENV variables into your os enviroment.
 openai.api_key = os.getenv("OPENAI_API_KEY")  # Get your API key from an environment variable
 
 conversation = []
-cost_per_token = (0.002 / 1000)
 total_tokens = 0
 
 system_msg = input("What type of AI would you like to create?\n")
