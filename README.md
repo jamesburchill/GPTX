@@ -1,6 +1,6 @@
 # GPTX
 
-GPTX eXtension Library
+GPT eXtension Library
 
 `pip install GPTX`
 
