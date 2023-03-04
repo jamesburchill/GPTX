@@ -27,10 +27,6 @@ while True:
     total_tokens += response['usage']['total_tokens']
 
     conversation.append({"role": "assistant", "content": reply})
-    # if len(reply) > MAXLENGTH and contains_no_punctuation():
-    #     print_in_chunks(reply)
-    # else:
-    # print(reply)
     print(reply + "\n")
 
 print("\nThis conversation used {} tokens and cost ${:.5f}".format(total_tokens, cost_per_token * total_tokens))
