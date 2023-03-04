@@ -2,6 +2,6 @@
 
 GPTX eXtension Library
 
-pip install GPTX
+`pip install GPTX`
 
 https://pypi.org/project/GPTX/
