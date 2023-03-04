@@ -1,6 +1,6 @@
 # GPTX
 
-OpenAI ChatGPT eXtension Library (Not Affiliated)
+ChatGPT API eXtensions Library (Not Affiliated w/OpenAI)
 
 `pip install GPTX`
 
