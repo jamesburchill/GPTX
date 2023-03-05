@@ -1,15 +1,11 @@
-import os
-
 import openai
-from dotenv import load_dotenv
 
-from common import cost_per_token
-
-load_dotenv()  # Load all the ENV variables into your os enviroment.
-openai.api_key = os.getenv("OPENAI_API_KEY")  # Get your API key from an environment variable
-
+from common import cost_per_token, get_api_key
 
 def chatbot():
+
+    if not get_api_key():
+        return False
 
     conversation = []
     total_tokens = 0
@@ -34,6 +30,8 @@ def chatbot():
         print(reply + "\n")
 
     print("\nThis conversation used {} tokens and cost ${:.5f}".format(total_tokens, cost_per_token * total_tokens))
+
+    return True
 
 
 if __name__ == '__main__':

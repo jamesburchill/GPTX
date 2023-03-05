@@ -1,5 +1,9 @@
 # Common GPTX Code
 
+import os
+import openai
+from dotenv import load_dotenv
+
 # VARIABLES
 
 cost_per_token = (0.002 / 1000)
@@ -19,3 +23,13 @@ def print_in_chunks(text):
     lines.append(current_line.strip())
     for line in lines:
         print(line)
+
+
+def get_api_key():
+    try:
+        load_dotenv()  # Load all the ENV variables into your os enviroment.
+        openai.api_key = os.getenv("OPENAI_API_KEY")  # Get your API key from an environment variable
+    except:
+        return False
+    else:
+        return True
