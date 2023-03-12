@@ -2,6 +2,7 @@ import openai
 
 from common import cost_per_token, get_api_key
 
+
 def chatbot():
 
     if not get_api_key():
